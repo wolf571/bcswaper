@@ -1,0 +1,102 @@
+{
+  "RootLayout": {
+    "title": "BCSwaper",
+    "config": "Config",
+    "profile": "Profile",
+    "strategy": "Strategy",
+    "swap": "Swap",
+    "order": "Order",
+    "log": "Log",
+    "help": "Help"
+  },
+  "HomePage": {
+    "statistic": "Statistics of buy and sell orders in the past 30 days",
+    "pie": "Statistics of order quantity in trading accounts"
+  },
+  "AccountPage": {
+    "title": "Account",
+    "name": "Account Name",
+    "address": "Account Address",
+    "privateKey": "Account PrivateKey",
+    "mnemonic": "Account Mnemonic",
+    "exchange": "Exchange"
+  },
+  "DydxAccountPage": {
+    "title": "Dydx Account",
+    "name": "Account Name",
+    "address": "Account Address",
+    "privateKey": "Account PrivateKey",
+    "mnemonic": "Account Mnemonic",
+    "exchange": "Exchange"
+  },
+  "OkxAccountPage": {
+    "title": "Okx Account",
+    "name": "Account Name",
+    "apiKey": "apiKey",
+    "passphrase": "passphrase",
+    "secretKey": "secretKey",
+    "formally": "Account Type",
+    "formallyTrue": "formally",
+    "formallyFalse": "simulated"
+  },
+  "ConfPage": {
+    "title": "Config",
+    "locale": "Language",
+    "orderInterval": "Order interval, in seconds",
+    "effortTimes": "Number of order retry attempts",
+    "effortInterval": "Order retry interval, in seconds",
+    "cancelingTimes": "Number of cancellation retry attempts",
+    "cancelingInterval": "Cancellation retry interval, in seconds",
+    "bestEffortSeconds": "Cooldown time for order cancellation status, in seconds",
+    "marketSpreads": "Premium/discount rate for order sweeping",
+    "orderCacheDays": "Order cache time, unit: day",
+    "logKeepDays": "Log retention time, in days"
+  },
+  "StrategyPage": {
+    "title": "Strategy",
+    "tab": {
+      "basic": "Baisc Info",
+      "param": "Params"
+    },
+    "name": "Strategy Name",
+    "remark": "Remark",
+    "exchange": "Exchange Advised",
+    "symbol": "Asset Advised",
+    "params": "Params for this strategy"
+  },
+  "SwapPage": {
+    "title": "Trade",
+    "tab": {
+      "basic": "Baisc Info",
+      "param": "Params"
+    },
+    "status": {
+      "running": "Running",
+      "stopped": "Stopped"
+    },
+    "name": "Swap Name",
+    "strategy": "Strategy for trade",
+    "exchange": "Exchange",
+    "account": "Account",
+    "subaccount": "Subaccount",
+    "symbol": "Asset to trade",
+    "ccy": "Settlement Currency",
+    "params": "Params value for strategy"
+  },
+  "OrderPage": {
+    "account": "Account",
+    "symbol": "Symbol",
+    "side": "Side",
+    "type": "Type",
+    "status": "Status",
+    "price": "Price",
+    "size": "Size",
+    "time": "Time"
+  },
+  "LogPage": {
+    "swapName": "Swap Name",
+    "symbol": "Symbol",
+    "createAt": "Create Time",
+    "content": "Content"
+  }
+}

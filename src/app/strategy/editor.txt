@@ -1,0 +1,60 @@
+import React, { useRef, useEffect } from 'react';
+import * as monaco from 'monaco-editor';
+import { monacoExtraLib } from '@/utils/monacoEditor';
+
+// @ts-ignore
+self.MonacoEnvironment = {
+    getWorkerUrl: function (_moduleId: any, label: string) {
+        if (label === "json")
+            return "_next/static/monaco/json.worker.js";
+        if (label === "css")
+            return "_next/static/monaco/css.worker.js";
+        if (label === "html")
+            return "_next/static/monaco/html.worker.js";
+        if (label === "typescript" || label === "javascript")
+            return "_next/static/monaco/ts.worker.js";
+        return "_next/static/monaco/editor.worker.js";
+    }
+};
+
+type EditorType = {
+    jsvalue: string;
+    setJscontent: Function;
+    params: string;
+}
+
+const MonacoEditor: React.FC<EditorType> = (props: EditorType) => {
+    const { jsvalue, setJscontent, params } = props;
+    const divEl = useRef<HTMLDivElement>(null);
+    let editor: monaco.editor.IStandaloneCodeEditor;
+    useEffect(() => {
+        if (divEl.current) {
+            editor = monaco?.editor.create(divEl.current, {
+                language: 'typescript',
+                theme: "vs",
+                minimap: {
+                    enabled: false,
+                },
+                value: jsvalue,
+            });
+            editor?.onDidChangeModelContent(() => {
+                // setJscontent(editor.getValue());
+            });
+            monaco?.languages.typescript.typescriptDefaults.addExtraLib(monacoExtraLib, 'so-lib');
+        }
+        // return () => {
+        //     editor?.dispose();
+        // };
+    }, []);
+    useEffect(() => {
+        if (params) {
+            monaco?.languages.typescript.typescriptDefaults.addExtraLib(
+                `class Params {
+              ${params}
+            }`, 'params-lib');
+        }
+    }, [params]);
+    return <div id="monacoEditor" className='codeArea' ref={divEl}></div>;
+};
+
+export default MonacoEditor;

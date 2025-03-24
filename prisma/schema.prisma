@@ -1,0 +1,141 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./bcswap.db"
+}
+
+//dydx account
+model DydxAccount {
+  id         String   @id @default(cuid())
+  name       String   @unique
+  address    String
+  // privateKey
+  privateKey String
+  // mnemonic
+  mnemonic   String
+  // 创建时间
+  createAt   DateTime @default(now())
+  updateAt   DateTime @updatedAt
+}
+
+//okx account
+model OkxAccount {
+  id         String   @id @default(cuid())
+  name       String   @unique
+  apiKey     String
+  passphrase String
+  secretKey  String
+  // 是否正式交易，否则为模拟
+  formally   Boolean
+  // 创建时间
+  createAt   DateTime @default(now())
+  updateAt   DateTime @updatedAt
+}
+
+//
+model Conf {
+  id                Int    @id @default(1)
+  locale            String
+  orderInterval     Int
+  effortTimes       Int
+  effortInterval    Int
+  cancelingTimes    Int
+  cancelingInterval Int
+  bestEffortSeconds Int
+  marketSpreads     Float
+  orderCacheDays    Int
+  logKeepDays       Int
+}
+
+model Strategy {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  remark    String
+  // 交易所
+  exchange  String
+  // 交易品种
+  symbol    String
+  // 创建时间
+  createAt  DateTime @default(now())
+  updateAt  DateTime @updatedAt
+  // 策略代码，base64
+  jscontent String
+  // 策略参数
+  params    String
+}
+
+//交易结构
+model Swap {
+  id         String   @id @default(cuid())
+  name       String   @unique
+  // 策略id
+  strategy   String
+  // 交易所
+  exchange   String
+  // 账户
+  account    String
+  // 子账户
+  subaccount Int      @default(0)
+  // 运行状态,true/false
+  status     Boolean  @default(false)
+  // 默认品种
+  symbol     String
+  // 结算币种
+  ccy        String
+  // 创建时间
+  createAt   DateTime @default(now())
+  updateAt   DateTime @updatedAt
+  // 策略参数，json
+  params     String
+}
+
+// 订单
+model Order {
+  id          String   @id @default(cuid())
+  name        String
+  account     String
+  symbol      String
+  //PositionSide
+  side        String
+  // OrderType
+  type        String
+  // OrderStatus
+  status      String
+  price       Float
+  size        Float
+  filled      Float
+  filledPrice Float    @default(0)
+  clientId    String
+  timeInForce String
+  reduceOnly  Boolean
+  orderFlags  String
+  // 创建时间
+  createAt    DateTime @default(now())
+  updateAt    DateTime @updatedAt
+
+  @@index([symbol])
+  @@index([status])
+  @@index([clientId])
+}
+
+// 日志
+model Log {
+  id       String   @id @default(cuid())
+  swapName String
+  symbol   String
+  content  String
+  // 创建时间
+  createAt DateTime @default(now())
+
+  @@index([symbol])
+  @@index([createAt])
+}

@@ -1,0 +1,50 @@
+{
+  "name": "bcswaper",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 9527 &",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dydxprotocol/v4-client-js": "^1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@monaco-editor/react": "^4",
+    "@mui/lab": "^6.0.0-beta.13",
+    "@mui/material": "^6",
+    "@mui/system": "^6",
+    "@mui/x-charts": "^7",
+    "@prisma/client": "^5",
+    "axios": "^1",
+    "crypto-js": "^4",
+    "lodash": "^4",
+    "monaco-editor": "^0",
+    "next": "^15",
+    "next-intl": "^3",
+    "node-schedule": "^2",
+    "query-string": "^9",
+    "react": "^18",
+    "react-dom": "^18",
+    "sqlite": "^5",
+    "typescript": "^5",
+    "ws": "^8"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4",
+    "@types/lodash": "^4",
+    "@types/node": "^22",
+    "@types/node-schedule": "^2",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/ws": "^8",
+    "copy-webpack-plugin": "^12",
+    "eslint": "^9",
+    "eslint-config-next": "15",
+    "postcss": "^8",
+    "prisma": "^5",
+    "tailwindcss": "^3"
+  }
+}

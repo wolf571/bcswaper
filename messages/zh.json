@@ -1,0 +1,102 @@
+{
+  "RootLayout": {
+    "title": "BCSwaper",
+    "config": "设 置",
+    "profile": "账 户",
+    "strategy": "策略",
+    "swap": "交易",
+    "order": "订单",
+    "log": "日志",
+    "help": "帮助"
+  },
+  "HomePage": {
+    "statistic": "近三十日买/卖单统计",
+    "pie": "交易账户订单数量统计"
+  },
+  "AccountPage": {
+    "title": "Account",
+    "name": "账户名",
+    "address": "账户地址",
+    "privateKey": "账户PrivateKey",
+    "mnemonic": "账户Mnemonic",
+    "exchange": "交易所"
+  },
+  "DydxAccountPage": {
+    "title": "Dydx Account",
+    "name": "账户名",
+    "address": "账户地址",
+    "privateKey": "账户PrivateKey",
+    "mnemonic": "账户Mnemonic",
+    "exchange": "交易所"
+  },
+  "OkxAccountPage": {
+    "title": "Okx Account",
+    "name": "账户名",
+    "apiKey": "apiKey",
+    "passphrase": "passphrase",
+    "secretKey": "secretKey",
+    "formally": "账号类别",
+    "formallyTrue": "正式账户",
+    "formallyFalse": "模拟账户"
+  },
+  "ConfPage": {
+    "title": "设置",
+    "locale": "语言",
+    "orderInterval": "下单间隔，单位秒",
+    "effortTimes": "下单重试次数",
+    "effortInterval": "下单重试间隔，单位秒",
+    "cancelingTimes": "撤单重试次数",
+    "cancelingInterval": "撤单重试间隔，单位秒",
+    "bestEffortSeconds": "报单取消状态冷却时间，单位秒",
+    "marketSpreads": "扫单时给出的溢/折价率，默认0.0001。",
+    "orderCacheDays": "订单缓存时间，单位天",
+    "logKeepDays": "日志保留时间，单位天"
+  },
+  "StrategyPage": {
+    "title": "Strategy",
+    "tab": {
+      "basic": "基础信息",
+      "param": "参数定义"
+    },
+    "name": "策略名",
+    "remark": "备注",
+    "exchange": "建议交易所",
+    "symbol": "建议交易标的",
+    "params": "策略参数"
+  },
+  "SwapPage": {
+    "title": "Trade",
+    "tab": {
+      "basic": "基础信息",
+      "param": "参数定义"
+    },
+    "status": {
+      "running": "运行中",
+      "stopped": "已停止"
+    },
+    "name": "交易名",
+    "strategy": "执行策略",
+    "exchange": "交易所",
+    "account": "交易账户",
+    "subaccount": "子账户",
+    "symbol": "交易标的",
+    "ccy": "结算币种",
+    "params": "参数值"
+  },
+  "OrderPage": {
+    "account": "账户",
+    "symbol": "交易标的",
+    "side": "交易方向",
+    "type": "交易类型",
+    "status": "订单状态",
+    "price": "成交价格",
+    "size": "成交数量",
+    "time": "交易时间"
+  },
+  "LogPage": {
+    "swapName": "交易名",
+    "symbol": "交易标的",
+    "createAt": "创建时间",
+    "content": "日志内容"
+  }
+}

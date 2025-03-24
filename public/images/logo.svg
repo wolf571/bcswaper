@@ -1,0 +1,15 @@
+<svg width="1024" height="1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" fill="#1677FF" d="m512,96c229.76,0 416,186.24 416,416s-186.24,416 -416,416s-416,-186.24 -416,-416s186.24,-416 416,-416zm0,64c-194.41067,0 -352,157.58933 -352,352s157.58933,352 352,352s352,-157.58933 352,-352s-157.58933,-352 -352,-352z"/>
+  <line stroke="null" id="svg_2" y2="791.70364" x2="676.8148" y1="239.85183" x1="328.66667" fill="none"/>
+  <path fill="#1677FF" opacity="NaN" d="m452,268.00002" id="svg_4"/>
+  <text transform="matrix(4.696979999999999,0,0,3.905299999999999,-1092.5908239746093,-1354.07083984375) " stroke="#000" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="128" stroke-width="0" id="svg_6" y="529.31042" x="303.853769" fill="#1677ff">B</text>
+  <path id="svg_5" d="m304.22276,368.562856l37.998628,320.324352c2.001275,1.897089 46.445612,335.229614 206.445224,119.674581c159.999612,-215.555033 -484.44327,-279.999321 -486.444541,-281.896408" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="none"/>
+ </g>
+</svg>
