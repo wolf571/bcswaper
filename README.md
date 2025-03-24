@@ -21,7 +21,7 @@ Linux等常见操作系统，容器化运行环境如docker/podman等。
 
 若操作者为其他用户，可能会在容器创建、运行的过程中遇到一些权限问题，请自行解决。  
 ```shell
-podman pull dus0571/bcswaper
+podman build -t dus0571/bcswaper .
 podman run -name bcswaper -p 9527:9727 -d dus0571/bcswaper
 ```
 系统默认开放9527端口，使用http协议，可通过http://<*ip*>:9527/进行访问。若系统部署在开放式环境，请自行控制对该端口的访问策略以确保安全。在本地环境下，可直接访问`http://localhost:9527/`进入系统界面。
